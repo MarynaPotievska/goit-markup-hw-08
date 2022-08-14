@@ -1,0 +1,39 @@
+.preferences {
+    padding-bottom: 0;
+  }
+  
+  .preferences__list {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .preferences__item {
+    width: 270px;
+    margin-right: var(--mrgn-sec);
+
+    &:last-child {
+        margin-right: 0;
+    }
+  }
+    
+  .preferences__icon-box {
+    display: flex;
+    height: 120px;
+    background-color: var(--bg-cl-sec);
+    margin-bottom: var(--mrgn-sec);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .preferences__icon {
+    display: block;
+    width: 70px;
+    height: 70px;
+  }
+  
+  .preferences__info {
+    color: var(--ft-cl-sec);
+    font-size: var(--ft-sz-base);
+    line-height: 1.71;
+    letter-spacing: var(--lttr-spc-base);
+  }

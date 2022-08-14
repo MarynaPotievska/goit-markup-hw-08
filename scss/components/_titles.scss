@@ -1,0 +1,34 @@
+.title {
+    text-align: center;
+    color: var(--ft-cl-main);
+    font-size: 36px;
+    line-height: calc (42 / 36);
+    letter-spacing: var(--lttr-spc-base);
+    margin-bottom: var(--mrgn-main);
+}
+
+.hero__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--ft-cl-accent);
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: var(--lttr-spc-title);
+    margin-bottom: 30px;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    color: var(--ft-cl-main);
+    font-size: var(--ft-sz-base);
+    line-height: calc(16 / 14);
+    letter-spacing: var(--lttr-spc-base);
+    margin-bottom: 10px;
+
+    &__footer {
+        color: var(--ft-cl-accent);    
+        margin-bottom: 20px;
+    }
+}
+

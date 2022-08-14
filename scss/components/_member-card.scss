@@ -1,0 +1,33 @@
+.member {
+    background-color: var(--bg-cl-main);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    margin-right: var(--mrgn-sec);
+
+    &:last-child {
+        margin-right: 0;
+      }
+  }
+   
+  .member__meta {
+    padding: 30px 0;
+    text-align: center;
+  }
+  
+  .member__name {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--ft-cl-main);
+    font-size: var(--ft-sz-sect-title-st);
+    line-height: 1.19;
+    letter-spacing: var(--lttr-spc-base);
+  }
+  
+  .member__pos {
+    color: var(--ft-cl-sec);
+    font-size: var(--ft-sz-sect-title-st);
+    line-height: 1.19;
+    letter-spacing: var(--lttr-spc-base);
+    margin-bottom: 16px;
+  }

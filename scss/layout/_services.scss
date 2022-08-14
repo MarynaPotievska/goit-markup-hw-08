@@ -1,0 +1,32 @@
+.services__list {
+    display: flex;
+    justify-content: center;
+    gap: var(--mrgn-sec);
+
+    &__box {
+        position: relative;
+    }
+      
+    &__photo {
+        display: block;
+    }
+      
+    &__name {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 370px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 14px;
+        line-height: calc(16 / 14);
+        letter-spacing: var(--lttr-spc-base);
+        color: var(--ft-cl-accent);
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+  }
+  
+  

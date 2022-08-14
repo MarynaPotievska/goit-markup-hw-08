@@ -1,0 +1,19 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    background-color: var(--bg-cl-main);
+    visibility: inherit;
+    opacity: 1;
+    transform: translate(-50%, -50%) perspective(400px) rotateY(0);
+    transition: transform var(--trans-actions), opacity var(--trans-actions),
+      visibility var(--trans-actions);
+
+    .backdrop.is-hidden & {
+        opacity: 0;
+        transform: translate(-50%, -50%) perspective(400px) rotateY(180deg);
+    }
+  }
+  
+  

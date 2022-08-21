@@ -15,7 +15,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
   </head>
   <body data-page>
@@ -26,6 +25,12 @@
             <span class="logo__web">Web</span>
             <span class="logo__studio logo__studio--dark">Studio</span>
           </a>
+
+          <button class="nav__btn btn" type="button" data-menu-open>
+            <svg width="40" height="40">
+              <use href="./images/icons.svg#menu-btn"></use>
+            </svg>
+          </button>
 
           <ul class="nav__list">
             <li class="nav__item">
@@ -79,49 +84,49 @@
       <section class="section preferences">
         <div class="container">
           <h2 class="visually-hidden">Наші переваги</h2>
-          <ul class="preferences__list">
-            <li class="preferences__item">
+          <ul class="preferences__list card-set">
+            <li class="preferences__item card-set__item">
               <div class="preferences__icon-box">
                 <svg class="preferences__icon">
                   <use href="./images/icons.svg#antenna"></use>
                 </svg>
               </div>
-              <h3 class="subtitle">УВАГА ДО ДЕТАЛЕЙ</h3>
+              <h3 class="subtitle subtitle__preferences">УВАГА ДО ДЕТАЛЕЙ</h3>
               <p class="preferences__info">
                 Ідейні міркування, і навіть початок повсякденної роботи з
                 формування позиції.
               </p>
             </li>
-            <li class="preferences__item">
+            <li class="preferences__item card-set__item">
               <div class="preferences__icon-box">
                 <svg class="preferences__icon">
                   <use href="./images/icons.svg#clock"></use>
                 </svg>
               </div>
-              <h3 class="subtitle">ПУНКТУАЛЬНІСТЬ</h3>
+              <h3 class="subtitle subtitle__preferences">ПУНКТУАЛЬНІСТЬ</h3>
               <p class="preferences__info">
                 Завдання організації, особливо рамки і місце навчання кадрів
                 тягне у себе.
               </p>
             </li>
-            <li class="preferences__item">
+            <li class="preferences__item card-set__item">
               <div class="preferences__icon-box">
                 <svg class="preferences__icon">
                   <use href="./images/icons.svg#diagram"></use>
                 </svg>
               </div>
-              <h3 class="subtitle">ПЛАНУВАННЯ</h3>
+              <h3 class="subtitle subtitle__preferences">ПЛАНУВАННЯ</h3>
               <p class="preferences__info">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li class="preferences__item">
+            <li class="preferences__item card-set__item">
               <div class="preferences__icon-box">
                 <svg class="preferences__icon">
                   <use href="./images/icons.svg#astronaut"></use>
                 </svg>
               </div>
-              <h3 class="subtitle">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
+              <h3 class="subtitle subtitle__preferences">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
               <p class="preferences__info">
                 Значимість цих проблем настільки очевидна, що реалізація
                 планових завдань.
@@ -138,7 +143,11 @@
             <li class="services__item">
               <div class="services__box">
                 <img
-                  src="./images/service1.jpg"
+                  srcset="
+                    ./images/services/services-1@1x.jpg 1x,
+                    ./images/services/services-1@2x.jpg 2x
+                  "
+                  src="./images/services/services-1@1x.jpg"
                   alt="Десктопні додатки"
                   width="370"
                   class="services__photo"
@@ -149,7 +158,11 @@
             <li class="services__item">
               <div class="services__box">
                 <img
-                  src="./images/service2.jpg"
+                  srcset="
+                    ./images/services/services-2@1x.jpg 1x,
+                    ./images/services/services-2@2x.jpg 2x
+                  "
+                  src="./images/services/services-2@1x.jpg"
                   alt="Мобільні додатки"
                   width="370"
                   class="services__photo"
@@ -160,7 +173,11 @@
             <li class="services__item">
               <div class="services__box">
                 <img
-                  src="./images/service3.jpg"
+                  srcset="
+                    ./images/services/services-3@1x.jpg 1x,
+                    ./images/services/services-3@2x.jpg 2x
+                  "
+                  src="./images/service-3.jpg"
                   alt="Дизайнерські рішення"
                   width="370"
                   class="services__photo"
@@ -176,14 +193,38 @@
         <div class="container">
           <h2 class="title">Наша команда</h2>
 
-          <ul class="team__list">
-            <li class="member">
-              <img
-                src="./images/team_member1.jpg"
-                alt="Фото Ігоря Дем'яненка"
-                width="270"
-                class="member__photo"
-              />
+          <ul class="team__list card-set">
+            <li class="member card-set__item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/team-1@1x_d.jpg 1x,
+                    ./images/team/team-1@2x_d.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/team-1@1x_t.jpg 1x,
+                    ./images/team/team-1@2x_t.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/team-1@1x_m.jpg 1x,
+                    ./images/team/team-1@2x_m.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/team-1@1x_m.jpg"
+                  alt="Фото Ігоря Дем'яненка"
+                  class="member__photo"
+                />
+              </picture>
+
               <div class="member__meta">
                 <h3 class="member__name">Ігор Дем'яненко</h3>
                 <p lang="en" class="member__pos">Product Designer</p>
@@ -236,13 +277,35 @@
               </div>
             </li>
 
-            <li class="member">
-              <img
-                src="./images/team_member2.jpg"
-                alt="Фото Ольги Рєпіної"
-                width="270"
-                class="member__photo"
-              />
+            <li class="member card-set__item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/team-2@2x_d.jpg 1x,
+                    ./images/team/team-2@2x_d.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/team-2@1x_t.jpg 1x,
+                    ./images/team/team-2@2x_t.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/team-2@1x_m.jpg 1x,
+                    ./images/team/team-2@2x_m.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/team-2@1x_m.jpg"
+                  alt="Фото Ольги Рєпіної"
+                  class="member__photo"
+                />
+              </picture>
               <div class="member__meta">
                 <h3 class="member__name">Ольга Рєпіна</h3>
                 <p lang="en" class="member__pos">Frontend Developer</p>
@@ -295,13 +358,35 @@
               </div>
             </li>
 
-            <li class="member">
-              <img
-                src="./images/team_member3.jpg"
-                alt="Фото Миколи Тарасова"
-                width="270"
-                class="member__photo"
-              />
+            <li class="member card-set__item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/team-3@1x_d.jpg 1x,
+                    ./images/team/team-3@2x_d.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/team-3@1x_t.jpg 1x,
+                    ./images/team/team-3@2x_t.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/team-3@1x_m.jpg 1x,
+                    ./images/team/team-3@2x_m.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/team-3@1x_m.jpg"
+                  alt="Фото Миколи Тарасова"
+                  class="member__photo"
+                />
+              </picture>
               <div class="member__meta">
                 <h3 class="member__name">Микола Тарасов</h3>
                 <p lang="en" class="member__pos">Marketing</p>
@@ -354,13 +439,35 @@
               </div>
             </li>
 
-            <li class="member">
-              <img
-                src="./images/team_member4.jpg"
-                alt="Фото Михайла Єрмакова"
-                width="270"
-                class="member__photo"
-              />
+            <li class="member card-set__item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/team/team-4@1x_d.jpg 1x,
+                    ./images/team/team-4@2x_d.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/team/team-4@1x_t.jpg 1x,
+                    ./images/team/team-4@2x_t.jpg 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/team/team-4@1x_m.jpg 1x,
+                    ./images/team/team-4@2x_m.jpg 2x
+                  "
+                />
+                <img
+                  src="./images/team/team-4@1x_m.jpg"
+                  alt="Фото Михайла Єрмакова"
+                  class="member__photo"
+                />
+              </picture>
               <div class="member__meta">
                 <h3 class="member__name">Михайло Єрмаков</h3>
                 <p lang="en" class="member__pos">UI Designer</p>
@@ -418,43 +525,43 @@
 
       <section class="section">
         <h2 class="title">Постійні клієнти</h2>
-        <ul class="clients">
-          <li class="clients__item">
+        <ul class="clients card-set">
+          <li class="clients__item card-set__item">
             <a href="" class="clients__link" aria-label="Компанія 1">
               <svg class="clients__logo">
                 <use href="./images/icons.svg#client1"></use>
               </svg>
             </a>
           </li>
-          <li class="clients__item">
+          <li class="clients__item card-set__item">
             <a href="" class="clients__link" aria-label="Компанія 2">
               <svg class="clients__logo">
                 <use href="./images/icons.svg#client2"></use>
               </svg>
             </a>
           </li>
-          <li class="clients__item">
+          <li class="clients__item card-set__item">
             <a href="" class="clients__link" aria-label="Компанія 3">
               <svg class="clients__logo">
                 <use href="./images/icons.svg#client3"></use>
               </svg>
             </a>
           </li>
-          <li class="clients__item">
+          <li class="clients__item card-set__item">
             <a href="" class="clients__link" aria-label="Компанія 4">
               <svg class="clients__logo">
                 <use href="./images/icons.svg#client4"></use>
               </svg>
             </a>
           </li>
-          <li class="clients__item">
+          <li class="clients__item card-set__item">
             <a href="" class="clients__link" aria-label="Компанія 5">
               <svg class="clients__logo">
                 <use href="./images/icons.svg#client5"></use>
               </svg>
             </a>
           </li>
-          <li class="clients__item">
+          <li class="clients__item card-set__item">
             <a href="" class="clients__link" aria-label="Компанія 6">
               <svg class="clients__logo">
                 <use href="./images/icons.svg#client6"></use>
@@ -475,7 +582,9 @@
           </a>
 
           <address class="footer__address">
-            <p class="footer__physical-address">м. Київ, пр-т Лесі Українки, 26</p>
+            <p class="footer__physical-address">
+              м. Київ, пр-т Лесі Українки, 26
+            </p>
             <ul>
               <li class="footer__contact-item">
                 <a href="mailto:info@devstudio.com" class="footer__contact-link"
@@ -495,7 +604,11 @@
           <h2 class="subtitle__footer subtitle">приєднуйтесь</h2>
           <ul class="links-list">
             <li class="links-list__item">
-              <a href="" class="links-list__link links-list__link--dark" aria-label="Посилання на інстаграм">
+              <a
+                href=""
+                class="links-list__link links-list__link--dark"
+                aria-label="Посилання на інстаграм"
+              >
                 <svg class="links-list__social-icon">
                   <use href="./images/icons.svg#instagram2"></use>
                 </svg>
@@ -573,38 +686,38 @@
           <div role="group" class="application__group">
             <label class="application__label label">
               <span class="label__name">Ім'я</span>
-              <svg class="label__icon">
-                <use href="./images/icons.svg#modal-person"></use>
-              </svg>
               <input
                 type="text"
                 name="customer-name"
                 class="application__field"
               />
+              <svg class="label__icon">
+                <use href="./images/icons.svg#modal-person"></use>
+              </svg>
             </label>
 
             <label class="application__label label">
               <span class="label__name">Телефон</span>
-              <svg class="label__icon">
-                <use href="./images/icons.svg#modal-phone"></use>
-              </svg>
               <input
                 type="tel"
                 name="customer-phone"
                 class="application__field"
               />
+              <svg class="label__icon">
+                <use href="./images/icons.svg#modal-phone"></use>
+              </svg>
             </label>
 
             <label class="application__label label">
               <span class="label__name">Пошта</span>
-              <svg class="label__icon">
-                <use href="./images/icons.svg#modal-email"></use>
-              </svg>
               <input
                 type="email"
                 name="customer-email"
                 class="application__field"
               />
+              <svg class="label__icon">
+                <use href="./images/icons.svg#modal-email"></use>
+              </svg>
             </label>
 
             <label class="application__label label">
@@ -638,13 +751,67 @@
             >
           </label>
 
-          <button type="submit" class="btn submit__btn">
-            Відправити
-          </button>
+          <button type="submit" class="btn submit__btn">Відправити</button>
         </form>
       </div>
     </div>
 
+    <div class="menu-overlay" data-menu>
+      <div class="menu-container">
+        <button class="btn menu-close__btn" data-menu-close>
+          <svg class="close__icon">
+            <use href="./images/icons.svg#close-black"></use>
+          </svg>
+        </button>
+
+        <ul class="momile-nav">
+          <li class="momile-nav__item">
+            <a
+              href="./index.html"
+              class="momile-nav__link momile-nav__link--current"
+              >Студія</a
+            >
+          </li>
+          <li class="momile-nav__item">
+            <a href="./portfolio.html" class="momile-nav__link">Портфоліо</a>
+          </li>
+          <li class="momile-nav__item">
+            <a href="" class="momile-nav__link">Контакти</a>
+          </li>
+        </ul>
+
+        <ul class="menu-contacts">
+          <li class="menu-contacts__item">
+            <a href="tel:+380961111111" class="menu-contacts__link">
+              +38 096 111 11 11
+            </a>
+          </li>
+
+          <li class="menu-contacts__item">
+            <a href="mailto:info@devstudio.com" class="menu-contacts__link">
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-socials">
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-socials__link"> Instagram </a>
+          </li>
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-socials__link"> Twitter </a>
+          </li>
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-socials__link"> Facebook </a>
+          </li>
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-socials__link"> LinkedIn </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

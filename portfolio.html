@@ -15,7 +15,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <link rel="stylesheet" href="./css/styles.css" />
     <title>Document</title>
   </head>
 
@@ -27,6 +26,12 @@
             <span class="logo__web">Web</span>
             <span class="logo__studio logo__studio--dark">Studio</span>
           </a>
+
+          <button class="nav__btn" type="button" data-menu-open>
+            <svg width="40" height="40">
+              <use href="./images/icons.svg#menu-btn"></use>
+            </svg>
+          </button>
 
           <ul class="nav__list">
             <li class="nav__item">
@@ -71,7 +76,10 @@
 
           <ul class="filters">
             <li class="filters__item">
-              <button type="button" class="btn filters__btn filters__btn--current">
+              <button
+                type="button"
+                class="btn filters__btn filters__btn--current"
+              >
                 Все
               </button>
             </li>
@@ -89,16 +97,38 @@
             </li>
           </ul>
 
-          <ul class="products">
-            <li class="product__card">
+          <ul class="products card-set">
+            <li class="product__card card-set__item">
               <a href="" class="product__link">
                 <div class="product__thumb">
-                  <img
-                    src="./images/product1.jpg"
-                    alt="Фото проєкту Технокряк"
-                    width="370"
-                    class="product-photo"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/product-1@1x_d.jpg 1x,
+                        ./images/portfolio/product-1@2x_d.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/product-1@1x_t.jpg 1x,
+                        ./images/portfolio/product-1@2x_t.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/product-1@1x_m.jpg 1x,
+                        ./images/portfolio/product-1@2x_m.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/product-1@1x_m.jpg"
+                      alt="Зображення веб-сайта Технокряк"
+                      class="product__photo"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="product__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -115,15 +145,37 @@
               </a>
             </li>
 
-            <li class="product__card">
+            <li class="product__card card-set__item">
               <a href="" class="product__link">
                 <div class="product__thumb">
-                  <img
-                    src="./images/product2.jpg"
-                    alt="Изображение проекта Постер New Orlean vs Golden Star"
-                    width="370"
-                    class="product-photo"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/product-2@1x_d.jpg 1x,
+                        ./images/portfolio/product-2@2x_d.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/product-2@1x_t.jpg 1x,
+                        ./images/portfolio/product-2@2x_t.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/product-2@1x_m.jpg 1x,
+                        ./images/portfolio/product-2@2x_m.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/product-2@1x_m.jpg"
+                      alt="Зображення постера New Orlean vs Golden Star"
+                      class="product__photo"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="product__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -142,15 +194,37 @@
               </a>
             </li>
 
-            <li class="product__card">
+            <li class="product__card card-set__item">
               <a href="" class="product__link">
                 <div class="product__thumb">
-                  <img
-                    src="./images/product3.jpg"
-                    alt="Изображение проекта Ресторан Seafood"
-                    width="370"
-                    class="product-photo"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/product-3@1x_d.jpg 1x,
+                        ./images/portfolio/product-3@2x_d.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/product-3@1x_t.jpg 1x,
+                        ./images/portfolio/product-3@2x_t.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/product-3@1x_m.jpg 1x,
+                        ./images/portfolio/product-3@2x_m.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/product-3@1x_m.jpg"
+                      alt="Зображення проєкта Ресторан Seafood"
+                      class="product__photo"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="product__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -169,15 +243,37 @@
               </a>
             </li>
 
-            <li class="product__card">
+            <li class="product__card card-set__item">
               <a href="" class="product__link">
                 <div class="product__thumb">
-                  <img
-                    src="./images/product4.jpg"
-                    alt="Изображение проекта Prime"
-                    width="370"
-                    class="product-photo"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/product-4@1x_d.jpg 1x,
+                        ./images/portfolio/product-4@2x_d.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/product-4@1x_t.jpg 1x,
+                        ./images/portfolio/product-4@2x_t.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/product-4@1x_m.jpg 1x,
+                        ./images/portfolio/product-4@2x_m.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/product-4@1x_m.jpg"
+                      alt="Зображення проєкта Prime"
+                      class="product__photo"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="product__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -196,15 +292,37 @@
               </a>
             </li>
 
-            <li class="product__card">
+            <li class="product__card card-set__item">
               <a href="" class="product__link">
                 <div class="product__thumb">
-                  <img
-                    src="./images/product5.jpg"
-                    alt="Изображение проекта Boxes"
-                    width="370"
-                    class="product-photo"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/product-5@1x_d.jpg 1x,
+                        ./images/portfolio/product-5@2x_d.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/product-5@1x_t.jpg 1x,
+                        ./images/portfolio/product-5@2x_t.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/product-5@1x_m.jpg 1x,
+                        ./images/portfolio/product-5@2x_m.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/product-5@1x_m.jpg"
+                      alt="Зображення проєкта Boxes"
+                      class="product__photo"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="product__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -223,15 +341,37 @@
               </a>
             </li>
 
-            <li class="product__card">
+            <li class="product__card card-set__item">
               <a href="" class="product__link">
                 <div class="product__thumb">
-                  <img
-                    src="./images/product6.jpg"
-                    alt="Изображение проекта веб-сайта Inspiration has no Borders"
-                    width="370"
-                    class="product-photo"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/product-6@1x_d.jpg 1x,
+                        ./images/portfolio/product-6@2x_d.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/product-6@1x_t.jpg 1x,
+                        ./images/portfolio/product-6@2x_t.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/product-6@1x_m.jpg 1x,
+                        ./images/portfolio/product-6@2x_m.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/product-6@1x_m.jpg"
+                      alt="Зображення веб-сайта Inspiration has no Borders"
+                      class="product__photo"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="product__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -250,15 +390,37 @@
               </a>
             </li>
 
-            <li class="product__card">
+            <li class="product__card card-set__item">
               <a href="" class="product__link">
                 <div class="product__thumb">
-                  <img
-                    src="./images/product7.jpg"
-                    alt="Изображение проекта издания Limited Edition"
-                    width="370"
-                    class="product-photo"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/product-7@1x_d.jpg 1x,
+                        ./images/portfolio/product-7@2x_d.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/product-7@1x_t.jpg 1x,
+                        ./images/portfolio/product-7@2x_t.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/product-7@1x_m.jpg 1x,
+                        ./images/portfolio/product-7@2x_m.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/product-7@1x_m.jpg"
+                      alt="Зображення видання Limited Edition"
+                      class="product__photo"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="product__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -277,15 +439,37 @@
               </a>
             </li>
 
-            <li class="product__card">
+            <li class="product__card card-set__item">
               <a href="" class="product__link">
                 <div class="product__thumb">
-                  <img
-                    src="./images/product8.jpg"
-                    alt="Изображение проекта LAB"
-                    width="370"
-                    class="product-photo"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/product-8@1x_d.jpg 1x,
+                        ./images/portfolio/product-8@2x_d.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/product-8@1x_t.jpg 1x,
+                        ./images/portfolio/product-8@2x_t.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/product-8@1x_m.jpg 1x,
+                        ./images/portfolio/product-8@2x_m.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/product-8@1x_m.jpg"
+                      alt="Зображення проєкта LAB"
+                      class="product__photo"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="product__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -304,15 +488,37 @@
               </a>
             </li>
 
-            <li class="product__card">
+            <li class="product__card card-set__item">
               <a href="" class="product__link">
                 <div class="product__thumb">
-                  <img
-                    src="./images/product9.jpg"
-                    alt="Изображение проекта Приложения Growing Business"
-                    width="370"
-                    class="product-photo"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/product-9@1x_d.jpg 1x,
+                        ./images/portfolio/product-9@2x_d.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/product-9@1x_t.jpg 1x,
+                        ./images/portfolio/product-9@2x_t.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/product-9@1x_m.jpg 1x,
+                        ./images/portfolio/product-9@2x_m.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/product-9@1x_m.jpg"
+                      alt="Зображення додатка Growing Business"
+                      class="product__photo"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="product__desc">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -334,8 +540,8 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer__contacts">
-        <div class="footer__box">
+      <div class="container footer__contacts card-set">
+        <div class="footer__box card-set__item">
           <h2 class="visually-hidden">Наші контакти</h2>
           <a href="./index.html" class="logo logo__footer">
             <span class="logo__web">Web</span>
@@ -343,7 +549,9 @@
           </a>
 
           <address class="footer__address">
-            <p class="footer__physical-address">м. Київ, пр-т Лесі Українки, 26</p>
+            <p class="footer__physical-address">
+              м. Київ, пр-т Лесі Українки, 26
+            </p>
             <ul>
               <li class="footer__contact-item">
                 <a href="mailto:info@devstudio.com" class="footer__contact-link"
@@ -359,11 +567,15 @@
           </address>
         </div>
 
-        <div class="footer__box">
+        <div class="footer__box card-set__item">
           <h2 class="subtitle__footer subtitle">приєднуйтесь</h2>
           <ul class="links-list">
             <li class="links-list__item">
-              <a href="" class="links-list__link links-list__link--dark" aria-label="Посилання на інстаграм">
+              <a
+                href=""
+                class="links-list__link links-list__link--dark"
+                aria-label="Посилання на інстаграм"
+              >
                 <svg class="links-list__social-icon">
                   <use href="./images/icons.svg#instagram2"></use>
                 </svg>
@@ -405,7 +617,7 @@
           </ul>
         </div>
 
-        <div class="footer__box">
+        <div class="footer__box card-set__item">
           <h2 class="subtitle__footer subtitle">Підпишіться на розсилку</h2>
           <form name="subscribe form">
             <input
@@ -424,5 +636,61 @@
         </div>
       </div>
     </footer>
+
+    <div class="menu-overlay" data-menu>
+      <div class="menu-container">
+        <button class="btn menu-close__btn" data-menu-close>
+          <svg class="close__icon">
+            <use href="./images/icons.svg#close-black"></use>
+          </svg>
+        </button>
+
+        <ul class="momile-nav">
+          <li class="momile-nav__item">
+            <a href="./index.html" class="momile-nav__link">Студія</a>
+          </li>
+          <li class="momile-nav__item">
+            <a
+              href="./portfolio.html"
+              class="momile-nav__link momile-nav__link--current"
+              >Портфоліо</a
+            >
+          </li>
+          <li class="momile-nav__item">
+            <a href="" class="momile-nav__link">Контакти</a>
+          </li>
+        </ul>
+
+        <ul class="menu-contacts">
+          <li class="menu-contacts__item">
+            <a href="mailto:info@devstudio.com" class="menu-contacts__link">
+              info@devstudio.com</a
+            >
+          </li>
+          <li class="menu-contacts__item">
+            <a href="tel:+380961111111" class="menu-contacts__link">
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
+
+        <ul class="mobile-socials">
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-socials__link"> Instagram </a>
+          </li>
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-socials__link"> Twitter </a>
+          </li>
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-socials__link"> Facebook </a>
+          </li>
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-socials__link"> LinkedIn </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>

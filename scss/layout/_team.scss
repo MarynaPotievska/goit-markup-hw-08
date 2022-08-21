@@ -1,10 +1,16 @@
 .team {
-    background-color: var(--bg-cl-sec);
+  background-color: var(--bg-cl-sec);
+}
 
-    &__list {
-        display: flex;
-        justify-content: center;
-    }
+.team__list {
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    --items: 2;
   }
-  
-  
+
+  @media screen and (min-width: 1200px) {
+    --items: 4;
+    flex-wrap: nowrap;
+  }
+}

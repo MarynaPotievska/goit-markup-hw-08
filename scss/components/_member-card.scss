@@ -6,10 +6,10 @@
 }
 
 .member__photo {
-  width: calc(100vw - var(--indent));
+  width: calc(100% - var(--indent));
 
   @media screen and (min-width: 768px) {
-    width: calc(100vw / var(--items) - var(--indent) * var(--items));
+    width: 354px;
   }
 
   @media screen and (min-width: 1200px) {

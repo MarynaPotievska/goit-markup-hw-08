@@ -40,7 +40,7 @@
 }
 
 .momile-nav {
-  margin-bottom: 302px;
+  margin-bottom: auto;
 }
 
 .momile-nav__item {
@@ -76,8 +76,11 @@
   margin-bottom: 64px;
 }
 
-.menu-contacts__item {
+.menu-contacts__item:first-child {
   margin-bottom: 32px;
+}
+
+.menu-contacts__phone { 
 
   font-weight: 500;
   font-size: 34px;
@@ -87,9 +90,8 @@
   color: var(--cl-accent);
 }
 
-.menu-contacts__item:nth-child(2) {
-  margin-bottom: 0;
-
+.menu-contacts__email {
+  font-weight: 500;
   font-size: 24px;
   line-height: calc(28 / 24);
 
@@ -110,7 +112,7 @@
   color: var(--cl-accent);
 }
 
-.mobile-socilas__item:not(:last-child) .mobile-socilas__link {
+.mobile-socials__item:not(:last-child) {  
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
